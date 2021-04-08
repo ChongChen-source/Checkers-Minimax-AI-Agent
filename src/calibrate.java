@@ -10,7 +10,7 @@ public class calibrate {
         generateCalibration(calibrate());
     }
 
-    public static final String CALIBRATION_PATH = "src/HW2/calibration.txt";
+    public static final String CALIBRATION_PATH = "src/calibration.txt";
 
     private static void generateCalibration(List<String> infos) {
         try {

@@ -49,6 +49,11 @@ public class MinimaxAlg {
             }
         }
 
+        if (board.getNumBlackPieces() < 4 || board.getNumWhitePieces() < 4) {
+            weightMiddleBoxPieces = 0;
+            weightMiddleTwoRowPieces = 0;
+        }
+
         return weightRegularPieces * (board.getNumBlackPieces() - board.getNumWhitePieces()) +
                 weightKings * (board.getNumBlackKings() - board.getNumWhiteKings()) +
                 weightBackRowPieces * (numBlackBackRowPieces - numWhiteBackRowPieces) +

@@ -4,12 +4,12 @@ public class Tester {
 
     public static void main(String[] args) {
 
-        playAgainstSelf("src/HW2/Test Cases/NSGame.txt");
+//        playAgainstSelf("src/Test Cases/NSGame.txt");
 
-//        playAgainstAgent("src/HW2/Test Cases/NSGame.txt");
+        playAgainstAgent("src/Test Cases/NSGame.txt");
 
 //        long start = System.nanoTime();
-//        localTest("src/HW2/Test Cases/Reference.txt", "src/HW2/outputs/output.txt");
+//        localTest("src/Test Cases/Reference.txt", "src/outputs/output.txt");
 //        long end = System.nanoTime();
 //        long durationInMilliseconds = (end - start) / 1000000;
 //        System.out.println("Time exclude IO in ms: " + (durationInMilliseconds));
@@ -27,7 +27,7 @@ public class Tester {
         long start = System.nanoTime();
 
         // determine depth
-        int depth = FileUtility.determineDepth(timeLeft, "src/HW2/calibration.txt");
+        int depth = FileUtility.determineDepth(timeLeft, "src/calibration.txt");
         System.out.println("Depth = " + depth);
 
         // Play!
@@ -79,7 +79,7 @@ public class Tester {
         while (board.getNumWhitePieces() > 0 && board.getNumBlackPieces() > 0) {
             System.out.println("************************* Round #" + roundCount + "*************************");
             System.out.println("timeLeft = " + blackTimeLeft);
-            int blackDepth = FileUtility.determineDepth(blackTimeLeft, "src/HW2/calibration.txt");
+            int blackDepth = FileUtility.determineDepth(blackTimeLeft, "src/calibration.txt");
             System.out.println("Depth = " + blackDepth);
 
             long blackStart = System.nanoTime();
@@ -96,7 +96,7 @@ public class Tester {
             /************************************************************/
 
             System.out.println("timeLeft = " + whiteTimeLeft);
-            int whiteDepth = FileUtility.determineDepth(whiteTimeLeft, "src/HW2/calibration.txt");
+            int whiteDepth = FileUtility.determineDepth(whiteTimeLeft, "src/calibration.txt");
             System.out.println("Depth = " + whiteDepth);
 
             long whiteStart = System.nanoTime();
@@ -218,7 +218,7 @@ public class Tester {
         long start = System.nanoTime();
 
         // determine depth
-        int depth = FileUtility.determineDepth(timeLeft, "src/HW2/calibration.txt");
+        int depth = FileUtility.determineDepth(timeLeft, "src/calibration.txt");
         System.out.println("Depth = " + depth);
         Move myMove = board.play(playMode, playColor, depth);
 
