@@ -6,7 +6,7 @@ public class Tester {
 
 //        playAgainstSelf("src/Test Cases/NSGame.txt");
 
-        playAgainstAgent("src/Test Cases/NSGame.txt");
+        playAgainstAgent("src/Test Cases/GameInitWhite.txt");
 
 //        long start = System.nanoTime();
 //        localTest("src/Test Cases/Reference.txt", "src/outputs/output.txt");

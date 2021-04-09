@@ -49,9 +49,20 @@ public class MinimaxAlg {
             }
         }
 
-        if (board.getNumBlackPieces() < 4 || board.getNumWhitePieces() < 4) {
+        int middleThreshold = 8;
+        if (board.getNumBlackPieces() < middleThreshold || board.getNumWhitePieces() < middleThreshold) {
             weightMiddleBoxPieces = 0;
             weightMiddleTwoRowPieces = 0;
+        }
+
+        int backRowThreshold = 6;
+        if (board.getNumBlackPieces() <  backRowThreshold || board.getNumWhitePieces() <  backRowThreshold) {
+            weightBackRowPieces = 0;
+        }
+
+        int kingThreshold = 4;
+        if (board.getNumBlackPieces() < kingThreshold || board.getNumWhitePieces() < kingThreshold) {
+            weightKings = 0;
         }
 
         return weightRegularPieces * (board.getNumBlackPieces() - board.getNumWhitePieces()) +
